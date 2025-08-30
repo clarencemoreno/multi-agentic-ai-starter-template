@@ -1,4 +1,4 @@
-# Steering Document & AI Workflow Guide (v1.1)
+# Steering Document & AI Workflow Guide (v1.2)
 
 ## 1. Purpose
 Defines the universal workflow for all AI agents. Ensures consistency, traceability, and smooth handoffs.
