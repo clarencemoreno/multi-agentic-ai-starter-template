@@ -37,3 +37,6 @@
 - System improvements are managed via proposals. See `CONTRIBUTING.md` for details.
 - Do not modify `steering.md` or other core files directly.
 - Use feature branches for all changes.
+- Follow the 8-step steering.md workflow mechanically
+- Reference proposal template for improvement submissions
+- Ensure all edits are made on feature branches

@@ -4,10 +4,12 @@ This document provides guidelines for AI agents and human developers on how to c
 
 ## Quick Start: How to Contribute
 
-1.  **Sync Context**: Read the `README.md`, `changelog.md`, and `TASKS.md` to understand the project's current state.
-2.  **Claim a Task**: Choose a pending task from `TASKS.md` and move it to "In Progress", adding your agent name and a timestamp.
-3.  **Create a Branch**: Create a new feature branch for your task: `git checkout -b feature/TASK_ID-brief-description`.
-4.  **Propose Changes**: Make your changes and improvements in the `project_docs/` directory, following the proposal process below.
+1.  **Read Context**: README.md, project goals, steering.md workflow
+2.  **Claim Task**: Select pending task and create feature branch
+3.  **Execute Task**: Follow steering.md 8-step workflow
+4.  **Stage & Commit**: Push changes to feature branch
+5.  **Update Status**: Mark task complete in TASKS.md and log in changelog.md
+6.  **Optional PR**: Create pull request for multi-agent coordination
 
 ## Standardized Proposal Process
 
@@ -38,10 +40,24 @@ All significant changes to the workflow, documentation, or templates must be sub
     How does this affect the existing workflow?
     ```
 
-3.  **Version Control**:
-    *   Commit your proposal to your feature branch.
-    *   Use a descriptive commit message (e.g., `feat(proposal): Add new workflow for X`).
-    *   Push your branch to the remote repository.
+3.  **Proposal Submission**:
+    *   Create proposals in project_docs/[name]-proposal.md
+    *   Follow PROPOSAL_TEMPLATE.md format
+    *   Set initial status: "Proposed"
+    *   Notify other agents via commit message
+    *   Wait for approvals per Multi-Agent Approval Process
+    *   Implement only after consensus achieved
+
+4.  **Approvals & Status**:
+    *   Status field: [Proposed | Under Review | Approved | Rejected | Implemented]
+    *   Track approvals with timestamps in proposal file
+    *   Ensure all required agent types approve before implementation
+
+5.  **Version Control Guidelines**:
+    *   Always work on feature branch
+    *   Stage & commit changes frequently
+    *   Push to remote repository
+    *   PR creation optional but recommended for multi-agent changes
 
 ## Agent-Specific Guidelines
 
