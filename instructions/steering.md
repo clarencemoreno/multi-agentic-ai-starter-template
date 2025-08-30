@@ -52,4 +52,7 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
 - If timestamps are close (<1 hour), add separate changelog entry.
 - Note conflicts for transparency.
 
+## 5. Contributing Improvements
+For proposing changes to this workflow or the project structure, please follow the guidelines in `CONTRIBUTING.md`.
+
 

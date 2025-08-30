@@ -32,3 +32,8 @@
 - Check TASKS.md for existing claims before proceeding
 - Include claim timestamp when moving to "In Progress"
 - Format: `- [x] **T001**: Task description (Claimed: 2025-08-30T15:30:00Z by Claude-Sonnet-4)`
+
+## Contributing to Workflow
+- System improvements are managed via proposals. See `CONTRIBUTING.md` for details.
+- Do not modify `steering.md` or other core files directly.
+- Use feature branches for all changes.

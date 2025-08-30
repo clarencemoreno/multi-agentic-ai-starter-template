@@ -1,146 +1,76 @@
-# Contributing to Multi-Agentic AI Starter Template
+# Contributing to the Multi-Agentic AI Starter Template
 
-## Quick Start for New Agents
+This document provides guidelines for AI agents and human developers on how to contribute to this project. Following these guidelines helps maintain a consistent, traceable, and collaborative workflow.
 
-1. **Read the context**: README.md → changelog.md → TASKS.md
-2. **Follow the workflow**: instructions/steering.md (7-step process)
-3. **Use your agent instructions**: instructions/[your-agent].md
-4. **Propose improvements**: Use the process below
+## Quick Start: How to Contribute
 
-## How to Contribute Improvements
+1.  **Sync Context**: Read the `README.md`, `changelog.md`, and `TASKS.md` to understand the project's current state.
+2.  **Claim a Task**: Choose a pending task from `TASKS.md` and move it to "In Progress", adding your agent name and a timestamp.
+3.  **Create a Branch**: Create a new feature branch for your task: `git checkout -b feature/TASK_ID-brief-description`.
+4.  **Propose Changes**: Make your changes and improvements in the `project_docs/` directory, following the proposal process below.
 
-### 1. Identify What to Improve
-Look for:
-- Workflow confusion or ambiguity
-- Missing instructions or templates
-- Coordination issues between agents
-- Documentation gaps
+## Standardized Proposal Process
 
-### 2. Create a Proposal
-**File location**: `project_docs/[descriptive-name]-proposal.md`
+All significant changes to the workflow, documentation, or templates must be submitted as proposals.
 
-**Required format**:
-```markdown
-# [Title] Proposal
+1.  **Location**: Create a new proposal file in `project_docs/[descriptive-name]-proposal.md`.
+2.  **Format**: Use the following template for your proposal:
 
-## Problem Statement
-What specific issue does this address?
+    ```markdown
+    # [Title] Proposal
 
-## Current State
-How does the current system work?
+    ## Problem Statement
+    What issue or gap does this address?
 
-## Proposed Solution
-Detailed description of your improvement
+    ## Current State
+    What's the current behavior/process?
 
-## Implementation
-Step-by-step how to implement this
+    ## Proposed Solution
+    A detailed description of the improvement.
 
-## Benefits
-Expected improvements and impact
+    ## Implementation
+    How would this be implemented?
 
-## Compatibility
-How this affects existing workflow
-```
+    ## Benefits
+    What are the expected improvements?
 
-### 3. Version Control Process
-```bash
-# Create feature branch
-git checkout -b feature/proposal-[brief-description]
+    ## Compatibility
+    How does this affect the existing workflow?
+    ```
 
-# Add your proposal
-git add project_docs/[your-proposal].md
-
-# Commit with clear message
-git commit -m "Add [title] proposal
-
-Brief description of what the proposal addresses
-
-🤖 Generated with [Agent Name]"
-
-# Push branch
-git push -u origin feature/proposal-[brief-description]
-```
-
-### 4. Implementation Guidelines
-- **Don't modify core files directly** (steering.md, TASKS.md format)
-- **Create proposals first** for any workflow changes
-- **Use feature branches** for all changes
-- **Follow existing conventions** (file naming, format, structure)
-
-## Types of Contributions
-
-### Workflow Improvements
-- Task coordination enhancements
-- Conflict resolution mechanisms
-- Timeline and scheduling improvements
-
-### Documentation
-- Agent-specific instruction updates
-- Template creation
-- Process clarification
-
-### Templates & Tools
-- Task templates
-- Changelog formats
-- Agent onboarding materials
+3.  **Version Control**:
+    *   Commit your proposal to your feature branch.
+    *   Use a descriptive commit message (e.g., `feat(proposal): Add new workflow for X`).
+    *   Push your branch to the remote repository.
 
 ## Agent-Specific Guidelines
 
-### For Claude
-- Use TodoWrite for task tracking
-- Follow file reference format: `file_path:line_number`
-- Read files before editing
+*   **Claude**: Utilize the `TodoWrite` tool for task tracking. Prefer `Edit/MultiEdit` over `Write` for existing files.
+*   **ChatGPT**: Maintain context throughout the conversation.
+*   **Gemini**: Leverage multimodal capabilities for tasks that involve analyzing images or other non-textual data.
 
-### For ChatGPT
-- Follow instructions/chatgpt.md (when created)
-- Maintain conversation context
+## Contribution Types & Boundaries
 
-### For Gemini
-- Follow instructions/gemini.md (when created)
-- Leverage multimodal capabilities appropriately
-
-## What NOT to Contribute
-
-- **Direct modifications** to steering.md without proposals
-- **Breaking changes** to existing file formats
-- **Agent-specific code** in universal workflow
-- **Overly complex** processes that hinder adoption
-
-## Review Process
-
-1. **Self-review**: Does this solve a real problem?
-2. **Compatibility check**: Does this break existing workflow?
-3. **Documentation**: Is the proposal clear and complete?
-4. **Implementation**: Can other agents easily follow this?
+*   **What to contribute**:
+    *   Workflow improvements
+    *   Documentation enhancements
+    *   New templates
+    *   Bug fixes
+*   **What NOT to contribute**:
+    *   Direct edits to core workflow files (`steering.md`, `README.md`) without an approved proposal.
+    *   Breaking changes that are not backward-compatible.
 
 ## File Structure Reference
 
 ```
-├── README.md                 # Project overview
-├── CONTRIBUTING.md           # This file
-├── TASKS.md                  # Central task tracking
-├── changelog.md              # Project status log
-├── instructions/
-│   ├── steering.md           # Universal workflow (don't modify directly)
-│   ├── claude.md             # Claude-specific instructions
-│   ├── chatgpt.md            # ChatGPT-specific instructions
-│   └── gemini.md             # Gemini-specific instructions
-└── project_docs/
-    ├── *.md                  # Working documents
-    └── *-proposal.md         # Improvement proposals
+.
+├── CONTRIBUTING.md       # Contribution guidelines (this file)
+├── README.md             # Project overview
+├── TASKS.md              # Task list
+├── changelog.md          # Log of all changes
+├── instructions/         # Agent-specific instructions
+│   ├── claude.md
+│   ├── gemini.md
+│   └── steering.md       # Universal workflow
+└── project_docs/         # Proposals and project documentation
 ```
-
-## Examples of Good Proposals
-
-- `flow-improvements-proposal.md` - Addresses specific coordination issues
-- `workflow-branch-commit-proposal.md` - Fixes missing version control steps
-- `agent-onboarding-contribution-proposal.md` - Solves onboarding gaps
-
-## Questions?
-
-If you're unsure about contributing:
-1. Check existing proposals for similar ideas
-2. Create a small proposal first to test the process
-3. Focus on one specific improvement at a time
-
-Remember: The goal is coordination between agents, not perfection. Small, clear improvements are better than complex overhauls.
