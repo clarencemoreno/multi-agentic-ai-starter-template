@@ -28,6 +28,28 @@ This template keeps everyone sane by providing:
 5. Agent completes task in TASKS.md
 6. Any agent can pick up next task at any time
 
+## How It Works
+
+```text
++-------------------------+    +-------------------------+    +-------------------------+
+| Agent reads README.md,  | -->| Agent claims a task     | -->| Agent executes task,    |
+| project goals, TASKS.md |    | from TASKS.md           |    | updates project_docs/   |
++-------------------------+    +-------------------------+    +-------------------------+
+                                                                       |
+                                                                       v
+                                                            +-------------------------+
+                                                            | Update changelog.md     |
+                                                            | with timestamp, task ID,|
+                                                            | and agent name          |
+                                                            +-------------------------+
+                                                                       |
+                                                                       v
+                                                            +-------------------------+
+                                                            | Next agent can pick up  |
+                                                            | any task at any time    |
+                                                            +-------------------------+
+
+
 ## Inter-Agent Superpower 💪
 - Works across different agent personalities and reasoning quirks  
 - High probability that agents will follow it without stepping on each other’s toes  
