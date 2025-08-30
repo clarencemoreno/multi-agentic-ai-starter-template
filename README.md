@@ -49,6 +49,7 @@ This template keeps everyone sane by providing:
                                                             | any task at any time    |
                                                             +-------------------------+
 
+```
 
 ## Inter-Agent Superpower 💪
 - Works across different agent personalities and reasoning quirks  
