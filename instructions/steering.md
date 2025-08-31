@@ -55,18 +55,11 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
    - Announce completion to the system or user.
 
 7. **Validation**
-   - Confirm modified files show actual changes
-   - Verify TASKS.md status updated correctly
-   - Check changelog.md uses UTC timestamps and correct Task IDs
-   - Ensure edits are made on feature branch
+   - Confirm file changes persist.
+   - Verify task status updated correctly.
+   - Ensure UTC timestamp format.
+   - **Check if workflow changes require version bump in steering.md**
 
-8. **Pull Request / Optional Review**
-   - For multi-agent coordination or significant changes, create a pull request
-   - Include in PR description:
-     - Task ID(s)
-     - Agent(s) involved
-     - Links to relevant changelog entries
-   - Note: PR review is recommended but not required for minor edits
 
 ## 4. Conflict Resolution
 - Check timestamps; newer entries take precedence.
