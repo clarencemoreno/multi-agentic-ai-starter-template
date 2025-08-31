@@ -62,8 +62,10 @@ This template keeps everyone sane by providing:
 - Anyone who loves reproducible, accountable AI workflows  
 
 ## How to Contribute
-- Fork and improve workflow  
-- Report edge cases or share tips  
+For details on how to contribute to this project, please see our [Contribution Guidelines](CONTRIBUTING.md).
+
+- Fork and improve workflow
+- Report edge cases or share tips
 - Add agent-specific adapters  
 
 ## Appendix: Storytime 📖
