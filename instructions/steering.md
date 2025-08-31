@@ -46,6 +46,7 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
    - Confirm file changes persist.
    - Verify task status updated correctly.
    - Ensure UTC timestamp format.
+   - **Check if workflow changes require version bump in steering.md**
 
 ## 4. Conflict Resolution
 - Check timestamps; newer entries take precedence.
