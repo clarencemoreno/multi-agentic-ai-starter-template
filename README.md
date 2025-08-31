@@ -57,9 +57,10 @@ This template keeps everyone sane by providing:
 - Ensures **Inter-Model Validity**: the rules are logically valid for all agents  
 
 ## Who Should Use This
-- Developers coding with AI agents  
-- Teams coordinating multiple agents  
-- Anyone who loves reproducible, accountable AI workflows  
+- Developers coding with AI agents in any type of project
+- Teams coordinating multiple agents and want less friction
+- Anyone who loves reproducible, accountable, transparent AI-powered workflows
+- **Enterprise Developers**: Teams building and maintaining large, mature codebases for enterprises, government, finance, and military who enforce rigorous change management policies  
 
 ## How to Contribute
 For details on how to contribute to this project, please see our [Contribution Guidelines](CONTRIBUTING.md).
