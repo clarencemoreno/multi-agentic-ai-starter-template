@@ -1,4 +1,4 @@
-# Steering Document & AI Workflow Guide (v1.3)
+# Steering Document & AI Workflow Guide (v1.4)
 
 ## 1. Purpose
 Defines the universal workflow for all AI agents. Ensures consistency, traceability, and smooth handoffs.
@@ -55,10 +55,22 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
    - Announce completion to the system or user.
 
 7. **Validation**
-   - Confirm file changes persist.
-   - Verify task status updated correctly.
-   - Ensure UTC timestamp format.
+   - Confirm modified files show actual changes
+   - Verify TASKS.md status updated correctly
+   - Check changelog.md uses UTC timestamps and correct Task IDs
+   - Ensure edits are made on feature branch
    - **Check if workflow changes require version bump in steering.md**
+
+8. **Pull Request / Optional Review**
+   - For multi-agent coordination or significant changes, create a pull request
+   - Include in PR description:
+     - Task ID(s) and summary
+     - Agent(s) involved  
+     - Links to relevant changelog entries
+     - Checklist of changes made
+   - Add reviewers (other agents or human maintainers)
+   - Set appropriate labels and milestones
+   - **Note: PR review is recommended but not required for minor edits**
 
 
 ## 4. Conflict Resolution
