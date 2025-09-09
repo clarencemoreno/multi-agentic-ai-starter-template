@@ -1,4 +1,4 @@
-# Steering Document & AI Workflow Guide (v1.4)
+# Steering Document & AI Workflow Guide (v2.0)
 
 ## 1. Purpose
 Defines the universal workflow for all AI agents. Ensures consistency, traceability, and smooth handoffs.
@@ -12,9 +12,9 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
 
 1. **Sync Context**
    - Read `README.md` for project goals.
-   - Read the **Current Project Status Summary** at top of `changelog.md`.
-   - Review `TASKS.md` to identify next pending task.
-   - If required files (`README.md`, `TASKS.md`, `changelog.md`) are missing, create using templates.
+   - Read the **Current Project Status Summary** at top of `.instructions/changelog.md`.
+   - Review `.instructions/tasks.md` to identify next pending task.
+   - If required files (`README.md`, `.instructions/tasks.md`, `.instructions/changelog.md`) are missing, create using templates.
 
 2. **Claim Task / Start Work**
    - Verify task is not already claimed.
@@ -23,16 +23,16 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
      git checkout -b feature/task-{TASK_ID}-brief-description
      ```
    - Only make edits on this branch.
-   - Log the claim in TASKS.md with timestamp and agent name:
+   - Log the claim in `.instructions/tasks.md` with timestamp and agent name:
      ```
      - [x] **T001**: Task description (Claimed: 2025-08-30T15:30:00Z by Claude-Sonnet-4)
      ```
 
 3. **Execute Task**
-   - Complete the assigned work, modifying or creating files in `project_docs/`.
+   - Complete the assigned work, modifying or creating files in `.proposals/`.
 
 4. **Log Your Work**
-   - Append new entry in `changelog.md`:
+   - Append new entry in `.instructions/changelog.md`:
      ```
      - Timestamp: {YYYY-MM-DDTHH:MM:SSZ}
      - Model: {Agent Name + Version}
@@ -51,13 +51,13 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
    - Stage changes: `git add [modified files]`
    - Commit with descriptive message: `git commit -m "T001: Implemented feature X"`
    - Push branch to remote: `git push -u origin [branch-name]`
-   - Update TASKS.md and changelog.md to reflect completion
+   - Update `.instructions/tasks.md` and `.instructions/changelog.md` to reflect completion
    - Announce completion to the system or user.
 
 7. **Validation**
    - Confirm modified files show actual changes
-   - Verify TASKS.md status updated correctly
-   - Check changelog.md uses UTC timestamps and correct Task IDs
+   - Verify `.instructions/tasks.md` status updated correctly
+   - Check `.instructions/changelog.md` uses UTC timestamps and correct Task IDs
    - Ensure edits are made on feature branch
    - **Check if workflow changes require version bump in steering.md**
 
@@ -79,6 +79,6 @@ Defines the universal workflow for all AI agents. Ensures consistency, traceabil
 - Note conflicts for transparency.
 
 ## 5. Contributing Improvements
-For proposing changes to this workflow or the project structure, please follow the guidelines in `CONTRIBUTING.md`.
+For proposing changes to this workflow or the project structure, please follow the guidelines in `.instructions/contributing.md`.
 
 

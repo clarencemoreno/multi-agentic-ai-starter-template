@@ -3,11 +3,13 @@
 ## Current Project Status Summary
 *(Single source of truth for project state; updated after every task completion)*
 
+- **MAJOR UPDATE**: Hidden folder restructuring implemented (v2.0) - all agent coordination files moved to `.instructions/` and `.proposals/`
+- Professional root directory structure for better human developer adoption
 - Multi-agent workflow refinements implemented with version control integration
-- Steering workflow updated to v1.4 with enterprise 8-step process including mandatory feature branch usage
+- Steering workflow updated to v2.0 with enterprise 8-step process including mandatory feature branch usage
 - Version management validation added to Step 7 (Option A implementation)
 - Enterprise PR workflow added as Step 8 with optional review process
-- All agent instruction files updated with new workflow requirements  
+- All agent instruction files updated with new workflow requirements and hidden folder paths  
 - Multi-agent approval process established and implemented
 - Task tracking backfilled for T001-T007 completion history
 - Next pending task: T008 (Design automated compliance review system)
@@ -16,6 +18,27 @@
 
 ## Historical Log
 *(Append-only log with timestamps, task IDs, agent names, and detailed changes)*
+
+- Timestamp: 2025-09-09T16:20:00Z
+- Model: Claude-Sonnet-4
+- Task: Implement Hidden Folder Restructuring Proposal (Major Version 2.0)
+- Task ID: T009
+- Changes:
+  - CREATED: .instructions/ (hidden folder for all agent coordination files)
+  - CREATED: .proposals/ (hidden folder for all proposals)
+  - MOVED: instructions/* → .instructions/
+  - MOVED: TASKS.md → .instructions/tasks.md
+  - MOVED: changelog.md → .instructions/changelog.md  
+  - MOVED: CONTRIBUTING.md → .instructions/contributing.md
+  - MOVED: project_docs/* → .proposals/
+  - DELETED: instructions/ and project_docs/ directories
+  - MODIFIED: README.md - Updated all path references, added "For AI Agents" and "For Human Developers" sections
+  - MODIFIED: .instructions/steering.md - Updated v1.4→v2.0, updated all file paths to use .instructions/ and .proposals/
+  - MODIFIED: .instructions/contributing.md - Updated all path references in file structure and guidelines
+  - MODIFIED: .instructions/claude.md - Updated all workflow and file path references
+  - MODIFIED: .instructions/chatgpt.md - Updated all workflow and file path references
+  - MODIFIED: .instructions/gemini.md - Updated all workflow and file path references
+  - MODIFIED: .proposals/hidden-folder-restructuring-proposal.md - Changed status to "Implemented"
 
 - Timestamp: 2025-08-30T18:30:00Z
 - Model: Gemini-Pro

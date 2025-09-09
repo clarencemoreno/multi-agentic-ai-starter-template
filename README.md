@@ -15,17 +15,17 @@ Now imagine multiple agents trying to work together… 🤯
 
 This template keeps everyone sane by providing:
 
-- Clear folder structure: instructions, project docs, tasks  
-- Central workflow in `steering.md`  
-- Single source of truth for task status (`TASKS.md`) and progress (`changelog.md`)  
+- Clean hidden folder structure: `.instructions/`, `.proposals/` 
+- Central workflow in `.instructions/steering.md`  
+- Single source of truth for task status (`.instructions/tasks.md`) and progress (`.instructions/changelog.md`)  
 - Traceable logs with timestamps, task IDs, and agent names  
 
 ## How It Works: Multi-Agent Flow
-1. Agent reads project context (README, changelog, tasks)
+1. Agent reads project context (README, `.instructions/changelog.md`, `.instructions/tasks.md`)
 2. Agent claims task
-3. Agent executes task in project_docs
-4. Agent logs work in changelog
-5. Agent completes task in TASKS.md
+3. Agent executes task in `.proposals/`
+4. Agent logs work in `.instructions/changelog.md`
+5. Agent completes task in `.instructions/tasks.md`
 6. Any agent can pick up next task at any time
 
 ## How It Works
@@ -33,7 +33,7 @@ This template keeps everyone sane by providing:
 ```text
 +-------------------------+    +-------------------------+    +-------------------------+
 | Agent reads README.md,  | -->| Agent claims a task     | -->| Agent executes task,    |
-| project goals, TASKS.md |    | from TASKS.md           |    | updates project_docs/   |
+| project goals, tasks.md |    | from tasks.md           |    | updates .proposals/     |
 +-------------------------+    +-------------------------+    +-------------------------+
                                                                        |
                                                                        v
@@ -62,8 +62,15 @@ This template keeps everyone sane by providing:
 - Anyone who loves reproducible, accountable, transparent AI-powered workflows
 - **Enterprise Developers**: Teams building and maintaining large, mature codebases for enterprises, government, finance, and military who enforce rigorous change management policies  
 
+## For AI Agents
+This project uses the Multi-Agentic AI Starter Template. 
+Agent instructions are in `.instructions/` - start with `.instructions/steering.md`.
+
+## For Human Developers  
+The `.instructions/` folder contains AI agent coordination files and can be safely ignored for regular development work.
+
 ## How to Contribute
-For details on how to contribute to this project, please see our [Contribution Guidelines](CONTRIBUTING.md).
+For details on how to contribute to this project, please see our [Contribution Guidelines](.instructions/contributing.md).
 
 - Fork and improve workflow
 - Report edge cases or share tips
