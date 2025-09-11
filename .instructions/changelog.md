@@ -1,18 +1,27 @@
 # Project Changelog & Status
 
 ## Current Project Status Summary
-- **MAJOR UPDATE**: Workflow v4.0 implemented. This is a significant process change.
-- `steering.md` is now the single source of truth, consolidating `contributing.md`.
-- Introduced 6 categories for all work types with a decision tree.
-- Restored detailed changelog format and mandatory "Current Project Status Summary" updates.
-- Added new proposal templates for different work categories.
-- Implemented a `Makefile` for workflow automation.
+- **MAJOR UPDATE**: Archiving strategy implemented. Proposals are now categorized into subdirectories. `steering.md` is updated to v4.1.
+- Active proposals are now in `.proposals/active/`.
+- Changelogs and tasks will be archived quarterly to `.instructions/archives/`.
 - Next pending task: T008 (Design automated compliance review system).
 
 ---
 
 ## Historical Log
 *(Append-only log with timestamps, task IDs, agent names, and detailed changes)*
+
+- Timestamp: 2025-09-10T19:00:00Z
+- Model: Gemini
+- Task ID: P002
+- Category: Process & Documentation Change
+- Summary: Implemented the Archiving Strategy proposal.
+- Changes:
+  - CREATED: .proposals/active/, .proposals/approved/, .proposals/implemented/, .proposals/superseded/, .proposals/templates/
+  - CREATED: .instructions/archives/
+  - MOVED: All existing proposals into the new categorized subdirectories.
+  - MODIFIED: .instructions/steering.md - Updated to v4.1 with new archiving rules and file paths.
+  - MODIFIED: .instructions/tasks.md - Logged completion of P002.
 
 - Timestamp: 2025-09-10T18:00:00Z
 - Model: Gemini
@@ -22,10 +31,10 @@
 - Changes:
   - MODIFIED: .instructions/steering.md - Consolidated content from contributing.md, added 6 work categories, restored detailed changelog requirements, and updated to v4.0.
   - DELETED: .instructions/contributing.md - Removed redundant file.
-  - CREATED: .proposals/process-change-template.md - Added new template.
-  - CREATED: .proposals/technical-improvement-template.md - Added new template.
-  - CREATED: .proposals/infrastructure-proposal-template.md - Added new template.
-  - CREATED: .proposals/bug-fix-template.md - Added new template.
+  - CREATED: .proposals/templates/process-change-template.md - Added new template.
+  - CREATED: .proposals/templates/technical-improvement-template.md - Added new template.
+  - CREATED: .proposals/templates/infrastructure-proposal-template.md - Added new template.
+  - CREATED: .proposals/templates/bug-fix-template.md - Added new template.
   - CREATED: Makefile - Added workflow automation.
   - MODIFIED: .instructions/tasks.md - Logged completion of P001.
 
@@ -48,7 +57,7 @@
   - MODIFIED: .instructions/claude.md - Updated all workflow and file path references
   - MODIFIED: .instructions/chatgpt.md - Updated all workflow and file path references
   - MODIFIED: .instructions/gemini.md - Updated all workflow and file path references
-  - MODIFIED: .proposals/hidden-folder-restructuring-proposal.md - Changed status to "Implemented"
+  - MODIFIED: .proposals/implemented/hidden-folder-restructuring-proposal.md - Changed status to "Implemented"
 
 - Timestamp: 2025-08-30T18:30:00Z
 - Model: Gemini-Pro
@@ -110,5 +119,5 @@
   - MODIFIED: ./README.md - Enhanced enterprise developer targeting
   - MODIFIED: ./instructions/steering.md - Updated to v1.4 with Step 8 PR workflow
   - MODIFIED: ./changelog.md - Updated current status summary
-  - MODIFIED: ./project_docs/enterprise-pr-workflow-proposal.md - Marked as implemented
-  - MODIFIED: ./project_docs/readme-enterprise-alignment-proposal.md - Marked as implemented
+  - MODIFIED: ./project_docs/implemented/enterprise-pr-workflow-proposal.md - Marked as implemented
+  - MODIFIED: ./project_docs/implemented/readme-enterprise-alignment-proposal.md - Marked as implemented
