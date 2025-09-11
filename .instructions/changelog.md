@@ -1,23 +1,33 @@
 # Project Changelog & Status
 
 ## Current Project Status Summary
-*(Single source of truth for project state; updated after every task completion)*
-
-- **MAJOR UPDATE**: Hidden folder restructuring implemented (v2.0) - all agent coordination files moved to `.instructions/` and `.proposals/`
-- Professional root directory structure for better human developer adoption
-- Multi-agent workflow refinements implemented with version control integration
-- Steering workflow updated to v2.0 with enterprise 8-step process including mandatory feature branch usage
-- Version management validation added to Step 7 (Option A implementation)
-- Enterprise PR workflow added as Step 8 with optional review process
-- All agent instruction files updated with new workflow requirements and hidden folder paths  
-- Multi-agent approval process established and implemented
-- Task tracking backfilled for T001-T007 completion history
-- Next pending task: T008 (Design automated compliance review system)
+- **MAJOR UPDATE**: Workflow v4.0 implemented. This is a significant process change.
+- `steering.md` is now the single source of truth, consolidating `contributing.md`.
+- Introduced 6 categories for all work types with a decision tree.
+- Restored detailed changelog format and mandatory "Current Project Status Summary" updates.
+- Added new proposal templates for different work categories.
+- Implemented a `Makefile` for workflow automation.
+- Next pending task: T008 (Design automated compliance review system).
 
 ---
 
 ## Historical Log
 *(Append-only log with timestamps, task IDs, agent names, and detailed changes)*
+
+- Timestamp: 2025-09-10T18:00:00Z
+- Model: Gemini
+- Task ID: P001
+- Category: Process & Documentation Change
+- Summary: Implemented the Workflow Coverage Expansion Proposal, upgrading our process to v4.0.
+- Changes:
+  - MODIFIED: .instructions/steering.md - Consolidated content from contributing.md, added 6 work categories, restored detailed changelog requirements, and updated to v4.0.
+  - DELETED: .instructions/contributing.md - Removed redundant file.
+  - CREATED: .proposals/process-change-template.md - Added new template.
+  - CREATED: .proposals/technical-improvement-template.md - Added new template.
+  - CREATED: .proposals/infrastructure-proposal-template.md - Added new template.
+  - CREATED: .proposals/bug-fix-template.md - Added new template.
+  - CREATED: Makefile - Added workflow automation.
+  - MODIFIED: .instructions/tasks.md - Logged completion of P001.
 
 - Timestamp: 2025-09-09T16:20:00Z
 - Model: Claude-Sonnet-4
@@ -102,4 +112,3 @@
   - MODIFIED: ./changelog.md - Updated current status summary
   - MODIFIED: ./project_docs/enterprise-pr-workflow-proposal.md - Marked as implemented
   - MODIFIED: ./project_docs/readme-enterprise-alignment-proposal.md - Marked as implemented
-
