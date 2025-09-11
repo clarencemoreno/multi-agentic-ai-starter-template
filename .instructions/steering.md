@@ -1,4 +1,4 @@
-# AI Agent Workflow & Contribution Guide (v4.0)
+# AI Agent Workflow & Contribution Guide (v4.1)
 
 ## 1. Purpose & Scope
 This document defines the **Unified Software Development Lifecycle (SDLC)** for all AI agents. It is the single source of truth for our workflow, ensuring a structured, traceable, and collaborative process from idea to implementation. It covers all types of work, including feature development, documentation, technical improvements, and bug fixes.
@@ -8,6 +8,7 @@ This document defines the **Unified Software Development Lifecycle (SDLC)** for 
 - **Clarity Through Design**: We agree on *how* we will build something before we start.
 - **Right-Sized Process**: The process overhead matches the complexity of the work.
 - **Traceability**: All work is linked to a task and logged in a detailed changelog.
+- **Cleanliness**: Active work areas are kept clean of historical clutter.
 
 ## 3. Universal Workflow: The 6 Categories
 All work must be classified into one of the following six categories. Use the decision tree below to determine the correct path.
@@ -74,12 +75,12 @@ Is this work...?
 This is the standard process for **Category 1: Feature Development**.
 
 ### Phase 1: Feature Proposal (The "What" and "Why")
-1.  **Create Proposal**: Use `.proposals/feature-development-template.md`.
+1.  **Create Proposal**: Use a template from `.proposals/templates/` and place the new proposal in `.proposals/active/`.
 2.  **Define Scope**: Fill out Problem Statement, User Value, and Success Criteria.
-3.  **Vote**: Agents review and vote. Approval is required to proceed.
+3.  **Vote**: Agents review and vote. Upon approval, move the proposal to `.proposals/approved/`.
 
 ### Phase 2: Technical Design & Task Breakdown (The "How")
-1.  **Expand Proposal**: The lead agent expands the same proposal file.
+1.  **Expand Proposal**: The lead agent expands the approved proposal file.
 2.  **Technical Blueprint**: Define architecture, data models, file manifests, testing strategy, etc.
 3.  **Task Breakdown**: Decompose the feature into granular **Implementation Tasks** (`F001-A`, `F001-B`).
 4.  **Technical Review**: Agents review the technical plan and vote for final approval.
@@ -94,7 +95,8 @@ This is the standard process for **Category 1: Feature Development**.
 1.  **Open Pull Request**: Open a PR when all implementation tasks are complete.
 2.  **Peer Review**: Agents review for conformance to design, quality, and test coverage.
 3.  **Merge**: Upon approval, merge to `main`.
-4.  **Close Tasks**: Mark the Feature Task and all child tasks as complete.
+4.  **Archive Proposal**: Move the completed proposal to `.proposals/implemented/`.
+5.  **Close Tasks**: Mark the Feature Task and all child tasks as complete.
 
 ---
 
@@ -103,15 +105,10 @@ This is the standard process for **Category 1: Feature Development**.
 
 ### Task List (`.instructions/tasks.md`)
 - All work, regardless of category, must have a task entry.
-- For features, the format is:
-  ```markdown
-  ### F001 - User Authentication System
-  **Status**: 2/6 tasks completed | **Branch**: feature/F001-user-auth
-  - [x] **F001-A**: Database schema (Completed: 2025-09-10T14:30:00Z by Claude)
-  - [ ] **F001-C**: API endpoints (In Progress: Gemini)
-  ```
+- Completed tasks older than the current quarter will be moved to `.instructions/archives/`.
 
 ### Changelog (`.instructions/changelog.md`)
+- This file should only contain entries for the current quarter. Older entries are moved to `.instructions/archives/`.
 - **Current Project Status Summary**: The summary at the top of the changelog MUST be updated after every significant action.
 - **Detailed Entry Format**: Every log entry must follow this format:
   ```markdown
@@ -141,9 +138,17 @@ This is the standard process for **Category 1: Feature Development**.
 ├── README.md
 └── .instructions/
     ├── steering.md       # Universal workflow & contribution guide (this file)
-    ├── tasks.md
-    ├── changelog.md
+    ├── tasks.md          # Active and recently completed tasks
+    ├── changelog.md      # Current quarter's changelog
+    ├── archives/         # Older tasks and changelogs
     ├── claude.md
     ├── chatgpt.md
     └── gemini.md
+.
+└── .proposals/
+    ├── active/           # Proposals currently under review
+    ├── approved/         # Proposals approved for implementation
+    ├── implemented/      # Archive of completed proposals
+    ├── superseded/       # Archive of rejected or outdated proposals
+    └── templates/        # Reusable templates for proposals
 ```
